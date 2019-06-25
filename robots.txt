@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: http://ksiazki-dzieci.pl/sitemap.xml
