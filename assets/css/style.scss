@@ -1,0 +1,110 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import "minima";
+@import url("https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two&display=swap");
+
+$primary-color: #4a86e8;
+$primary-color-darken: darken($primary-color, 15%);
+$second-color: #ffff00;
+$second-color-darken: darken($second-color, 15%);
+$primary-font: "Shadows Into Light Two", cursive;
+.site-header {
+  background: $primary-color;
+  .page-link {
+    color: $second-color;
+    font-family: $primary-font;
+    letter-spacing: 1.2px;
+    font-weight: 600;
+    &:hover {
+      color: $second-color-darken;
+      transition: all ease 0.5s;
+    }
+  }
+  .site-title {
+    font-family: $primary-font;
+    color: $second-color;
+    &:hover {
+      .ksiazki-logo {
+        opacity: 0.7;
+        transition: all ease 0.5s;
+      }
+    }
+    &:hover {
+      color: $second-color-darken;
+      transition: all ease 0.5s;
+    }
+    .ksiazki-logo {
+      height: 40px;
+      padding-left: 10px;
+    }
+  }
+  .site-nav {
+    background: $primary-color;
+  }
+}
+.site-footer {
+  background: $primary-color;
+  .footer-col-wrapper {
+    color: $second-color;
+    .u-email {
+      color: $second-color;
+      &:hover {
+        color: $second-color-darken;
+        transition: all ease 0.5s;
+      }
+    }
+  }
+  .social-media-list {
+    li {
+      a {
+        border: 0;
+        &:hover {
+          use {
+            color: $second-color-darken;
+            transition: all ease 0.5s;
+          }
+        }
+        .grey {
+          color: $second-color !important;
+        }
+      }
+    }
+  }
+}
+#cookie-notice {
+  padding: 7px 15px;
+  display: none;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: $primary-color;
+  color: $second-color;
+}
+#cookie-notice a {
+  cursor: pointer;
+  margin-left: 10px;
+  border: 1.5px solid $second-color;
+  padding: 2px 5px;
+  border-radius: 5px;
+  font-weight: 700;
+  color: $second-color;
+  &:hover {
+    background: $second-color;
+    color: $primary-color;
+    transition: ease all 0.4s;
+  }
+}
+@media (max-width: 767px) {
+  #cookie-notice span {
+    display: block;
+    padding-top: 3px;
+    margin-bottom: 13px;
+  }
+  #cookie-notice a {
+    position: relative;
+    bottom: 4px;
+  }
+}
